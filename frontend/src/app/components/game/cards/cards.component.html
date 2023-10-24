@@ -1,0 +1,7 @@
+<div class="list-container">
+  <div class="card-wrapper" *ngFor="let card of CARDS">
+    <app-card [card]="card" class="card" [selectable]="true" [isSelected]="(card === selectedCard)"
+              (selected)="onCardSelected(card)"></app-card>
+  </div>
+</div>
+

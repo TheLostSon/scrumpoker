@@ -1,0 +1,6 @@
+<div class="user-container" [ngStyle]="group?.styleClass">
+  <div class="name">{{ user.name }}</div>
+  <div class="group">({{ group?.shortName }})</div>
+  <app-card class="card" [card]="card" [hiddenState]="hiddenState" *ngIf="!isModerator(group)"></app-card>
+  <app-card class="card2" [card]="card2" [hiddenState]="hiddenState" *ngIf="(!hiddenState && card2 && !isModerator(group))"></app-card>
+</div>

@@ -1,0 +1,30 @@
+.user-container {
+  border: 2px solid;
+  margin-top: 0.2rem;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name {
+  margin-right: 0.5rem;
+  justify-self: flex-start;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+.group {
+  margin-right: auto;
+  justify-self: flex-start;
+  font-size: 1.25rem;
+  color: #555555;
+}
+
+.card, .card2 {
+  margin-left: 0.25rem;
+  justify-self: flex-end;
+  width: 2.25rem;
+  font-size: 1.5rem;
+}

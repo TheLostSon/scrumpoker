@@ -1,0 +1,20 @@
+<div class="game-page">
+  <div class="game-container">
+    <app-cards class="poker-cards" *ngIf="!isModerator(userGroup); else productOwnerButton"
+               [selectedCard]="user.cardEdited ?? user.card"
+               (select)="selectCard($event)">
+    </app-cards>
+
+    <ng-template #productOwnerButton>
+      <button class="hide-btn" (click)="toggleHiddenState()">
+        {{currentHiddenState ? 'Aufdecken' : 'Zurücksetzen'}}
+      </button>
+    </ng-template>
+
+    <app-user class="user" *ngFor="let user of currentList" [user]="user" [hiddenState]="currentHiddenState"></app-user>
+
+    <button class="logout-btn" (click)="quit()">
+      Logout
+    </button>
+  </div>
+</div>

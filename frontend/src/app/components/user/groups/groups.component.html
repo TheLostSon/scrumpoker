@@ -1,0 +1,13 @@
+<div class="group-container">
+  <div *ngFor="let group of groups">
+
+    <input type="radio" name="selectGroup" [value]="group.shortName" [id]="group.shortName+'_radio'">
+    <label [for]="group.shortName+'_radio'" (click)="onClick(group.name)">
+      <span class="group-item" [ngStyle]="group.styleClass">
+        {{group.name}}
+      </span>
+    </label>
+
+  </div>
+</div>
+

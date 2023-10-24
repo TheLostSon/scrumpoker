@@ -1,0 +1,36 @@
+.card-container {
+  aspect-ratio: 1/1.5;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  border-radius: 0.75rem;
+}
+
+.front-side {
+  color: #000000;
+  background-color: #EFF4FA;
+}
+
+.front-side-selected {
+  color: #FFFFFF;
+  background-color: #204288;
+  font-weight: bold;
+}
+
+.back-side {
+  color: #FFFFFF;
+  background-color: #204288;
+}
+
+.empty-slot {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.icon {
+}
+
+
+

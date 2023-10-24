@@ -1,0 +1,38 @@
+header {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 64px;
+  font-size: 200%;
+  padding: 10px;
+  background-color: #204288;
+
+  span {
+    color: white;
+  }
+}
+
+.main-container {
+  width: 100%;
+  height: calc(100% - 96px);
+  position: relative;
+  outline: 3px solid #BF002D;
+  overflow-x: hidden;
+}
+
+footer {
+  display: flex;
+  box-sizing: border-box;
+
+  min-width: 100%;
+  height: 32px;
+  padding: 10px;
+  background-color: #204288;
+  font-size: 0.75rem;
+
+  justify-content: flex-end;
+
+  span {
+    color: white;
+  }
+}

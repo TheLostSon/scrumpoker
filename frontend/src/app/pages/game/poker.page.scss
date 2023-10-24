@@ -1,0 +1,55 @@
+.game-page {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #EFF4FA;
+}
+
+.game-container {
+  width: 50%;
+  border: 2px solid #204288;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+
+  padding: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hide-btn {
+  width: 100%;
+  height: 6rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #204288;
+  background-color: #EFF4FA;
+
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.logout-btn {
+  width: 250px;
+  padding: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  float: right;
+
+  border: 1px solid #204288;
+  border-bottom-right-radius: 5px;
+  background-color: #EFF4FA;
+
+  margin-top: 0.5rem;
+
+  &:hover {
+    font-weight: bolder;
+  }
+}
