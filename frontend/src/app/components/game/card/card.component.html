@@ -1,4 +1,4 @@
-<div class="card-container front-side" *ngIf="!hiddenState && (card.title || card.icon) && !selectable">
+<div class="card-container front-side" [ngClass]="inactive" *ngIf="!hiddenState && (card.title || card.icon) && !selectable">
   <!--Karte gewählt - Icon-->
   <mat-icon inline *ngIf="card.icon && (!card.title)" class="icon">{{card.icon}}</mat-icon>
   <!--Karte gewählt - Titel-->
@@ -18,7 +18,7 @@
   <mat-icon inline class="icon">diamond</mat-icon>
 </div>
 
-<div class="card-container empty-slot" *ngIf="(!card.title)&&(!card.icon)">
+<div class="card-container empty-slot" [ngClass]="inactive" *ngIf="(!card.title)&&(!card.icon)">
   <!--Keine Karte gewählt und angezeigt-->
   <mat-icon inline *ngIf="!hiddenState" class="icon">{{CARD_EMPTY.icon}}</mat-icon>
   <!--Keine Karte gewählt und ausgeblendet-->

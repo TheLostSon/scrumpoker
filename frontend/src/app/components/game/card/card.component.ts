@@ -11,6 +11,7 @@ export class CardComponent {
   @Input() hiddenState: boolean = false;
   @Input() selectable: boolean = false;
   @Input() isSelected: boolean = false;
+  @Input() inactive?: 'inactive';
 
   @Output() selected: EventEmitter<Card> = new EventEmitter();
 
