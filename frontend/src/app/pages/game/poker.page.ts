@@ -86,6 +86,8 @@ export class PokerPage implements OnInit {
   protected quit() {
     localStorage.removeItem(LOCAL_STORAGE_INDEX.NAME);
     localStorage.removeItem(LOCAL_STORAGE_INDEX.GROUP);
+    localStorage.removeItem(LOCAL_STORAGE_INDEX.CARD1);
+    localStorage.removeItem(LOCAL_STORAGE_INDEX.CARD2);
     this.socketService.closeSocket();
     this.router.navigate([''], { relativeTo: this.route });
   }
