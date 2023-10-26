@@ -97,8 +97,13 @@ export class PokerPage implements OnInit {
       this.user.card = $event;
       localStorage.setItem(LOCAL_STORAGE_INDEX.CARD1, '' + $event.sort);
     } else {
-      this.user.cardEdited = $event;
-      localStorage.setItem(LOCAL_STORAGE_INDEX.CARD2, '' + $event.sort);
+      if (this.user.card?.title === $event.title && this.user.card?.icon === $event.icon) {
+        this.user.cardEdited = undefined;
+        localStorage.removeItem(LOCAL_STORAGE_INDEX.CARD2);
+      } else {
+        this.user.cardEdited = $event;
+        localStorage.setItem(LOCAL_STORAGE_INDEX.CARD2, '' + $event.sort);
+      }
     }
     this.socketService.update(this.user);
   }
